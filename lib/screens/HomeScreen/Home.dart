@@ -29,7 +29,11 @@ class Home extends StatelessWidget {
                 barrierDismissible: true,
                 context: context,
                 builder: (context) {
-                  return AddExerciseDialog();
+                  /// TODO: return a dialog box
+                  /// to add an exercise
+                  return Dialog();
+
+                  /// END OF TODO
                 },
               );
             }),

@@ -13,24 +13,9 @@ class ExerciseTile extends StatelessWidget {
   Widget build(BuildContext context) {
     final exerciseProvider = context.watch<ExcerciseProvider>();
 
-    return Container(
-      decoration:
-          BoxDecoration(border: Border(top: BorderSide(color: Colors.red))),
-      child: ListTile(
-        title: Text(taskName, style: TextStyle(color: Colors.white)),
-        subtitle: Text(
-            'Needs to be done by ${date.month}/${date.day}/${date.month} at ${date.hour}:${date.minute}',
-            style: TextStyle(color: Colors.white)),
-        trailing: GestureDetector(
-          onTap: () {
-            exerciseProvider.removeExercise(index);
-          },
-          child: Icon(
-            Icons.check,
-            color: Colors.green,
-          ),
-        ),
-      ),
-    );
+    /// TODO: Implement the ExerciseTile
+    /// that displays some exercise info
+    /// in a ListTile widget
+    return Container();
   }
 }

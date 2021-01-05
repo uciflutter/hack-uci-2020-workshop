@@ -9,68 +9,12 @@ class ExcerciseDetail extends StatelessWidget {
     final Excercise args = ModalRoute.of(context).settings.arguments;
     final DateTime date = args.date;
 
+    /// TODO: Implements a more detailed version
+    /// of the ExerciseTile in a new screen by using
+    /// Stacked Widget as well
+
     return Scaffold(
-      body: Container(
-        color: Colors.black,
-        padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.08),
-        child: Stack(
-          children: [
-            Container(
-              width: double.infinity,
-              height: MediaQuery.of(context).size.height,
-              decoration: BoxDecoration(
-                color: Colors.red,
-                borderRadius: BorderRadius.circular(25),
-              ),
-            ),
-            Container(
-              width: double.infinity,
-              height: MediaQuery.of(context).size.height * 0.35,
-              decoration: BoxDecoration(
-                color: Colors.blue,
-                borderRadius: BorderRadius.circular(25),
-              ),
-              child: Center(
-                child: Text(
-                  args.name,
-                  style: TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
-                ),
-              ),
-            ),
-            Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Needs to be done by ${date.month}/${date.day}/${date.month}',
-                    style: TextStyle(
-                        fontStyle: FontStyle.italic,
-                        color: Colors.white,
-                        fontSize: 15),
-                  ),
-                  Text(
-                    'Sets: ${args.sets}',
-                    style: TextStyle(
-                        fontStyle: FontStyle.italic,
-                        color: Colors.white,
-                        fontSize: 15),
-                  ),
-                  Text(
-                    'Reps: ${args.reps}',
-                    style: TextStyle(
-                        fontStyle: FontStyle.italic,
-                        color: Colors.white,
-                        fontSize: 15),
-                  ),
-                ],
-              ),
-            )
-          ],
-        ),
-      ),
+      body: Container(),
     );
   }
 }

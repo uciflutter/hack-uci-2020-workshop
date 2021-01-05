@@ -7,23 +7,16 @@ class SearchBar extends StatelessWidget {
   Widget build(BuildContext context) {
     final taskProvider = context.watch<ExcerciseProvider>();
 
+    /// TODO: Create a searchbar widget
+    /// that implements a filtering function
+    /// on the exercise list
+
     return SafeArea(
-      child: TextField(
-        decoration: InputDecoration(
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(50),
-          ),
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(50),
-            borderSide: BorderSide(color: Colors.blue),
-          ),
-          hintText: "Search for a task...",
+      child: Text(
+        'Search Bar',
+        style: TextStyle(
+          color: Colors.white,
         ),
-        style: TextStyle(color: Colors.white),
-        onChanged: (value) {
-          taskProvider.onQueryChange(value);
-          print(taskProvider.filterExcercises());
-        },
       ),
     );
   }

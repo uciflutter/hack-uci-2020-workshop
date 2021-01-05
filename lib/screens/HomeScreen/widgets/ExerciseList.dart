@@ -13,20 +13,10 @@ class ExerciseList extends StatelessWidget {
     final taskProvider = context.watch<ExcerciseProvider>();
     List<Excercise> tasks = taskProvider.filterExcercises();
 
-    return ListView.builder(
-      itemBuilder: (context, index) {
-        Excercise e = tasks[index];
-        return GestureDetector(
-          onTap: () => Navigator.pushNamed(context, ExcerciseDetail.routeName,
-              arguments: e),
-          child: ExerciseTile(
-            index: index,
-            taskName: e.name,
-            date: e.date,
-          ),
-        );
-      },
-      itemCount: tasks.length,
-    );
+    /// TODO: Implement the a listview.builder()
+    /// widget that displays all the different
+    /// exercises in the ExerciseTile Widget
+
+    return Text('Exercise List', style: TextStyle(color: Colors.white));
   }
 }
